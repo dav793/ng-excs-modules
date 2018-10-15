@@ -1,6 +1,7 @@
 
 <div class="pd-bottom-footer">
 
+
   <h1 class="pd-lateral">Cars</h1>
 
   <app-filter
@@ -8,7 +9,11 @@
     (filter)="setFilteredCars($event)"
   ></app-filter>
 
-  <app-cars-table [data]="finalCars"></app-cars-table>
+  <app-sort></app-sort>
+
+  <app-table [data]="filteredCars" [columnMetadata]="carsMetadata"></app-table>
+
+
 
   <h1 class="pd-lateral">Movies</h1>
 
@@ -17,7 +22,9 @@
     (filter)="setFilteredMovies($event)"
   ></app-filter>
 
-  <app-movies-table [data]="finalMovies"></app-movies-table>
+  <app-sort></app-sort>
+
+  <app-table [data]="filteredMovies" [columnMetadata]="moviesMetadata"></app-table>
+
 
 </div>
-

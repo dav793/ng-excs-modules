@@ -2,6 +2,11 @@ import { Injectable } from '@angular/core';
 import { Movie } from "./movie/movie";
 import { Car } from "./car/car";
 
+export interface ColumnMetadata {
+  name: string;
+  type: 'string'|'money'|'array';
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -31,6 +36,14 @@ export class DataService {
         model: 'TT',
         price: 40000,
       }
+    ];
+  }
+
+  getCarsColumnMetadata(): ColumnMetadata[] {
+    return [
+      {name: 'manufacturer', type: 'string'},
+      {name: 'model', type: 'string'},
+      {name: 'price', type: 'money'}
     ];
   }
 
@@ -74,6 +87,15 @@ export class DataService {
           'martial arts'
         ]
       }
+    ];
+  }
+
+  getMoviesColumnMetadata(): ColumnMetadata[] {
+    return [
+      {name: 'title', type: 'string'},
+      {name: 'year', type: 'string'},
+      {name: 'director', type: 'string'},
+      {name: 'genre', type: 'array'}
     ];
   }
 

@@ -1,0 +1,21 @@
+
+<table *ngIf="data && columnMetadata">
+  <tr>
+    <th *ngFor="let column of columnMetadata">{{ column.name | uppercase }}</th>
+  </tr>
+  <tr *ngFor="let row of data">
+    <td *ngFor="let column of columnMetadata">
+
+      <ng-container [ngSwitch]="column.type">
+        <span *ngSwitchCase="'string'">{{ row[column.name] }}</span>
+        <span *ngSwitchCase="'money'">{{ row[column.name] | currency }}</span>
+        <span *ngSwitchCase="'array'">
+          <span *ngFor="let opt of row[column.name]; let i = index"><span *ngIf="i > 0">, </span>{{ opt }}</span>
+        </span>
+      </ng-container>
+
+    </td>
+  </tr>
+</table>
+
+<p *ngIf="data.length === 0" class="center muted">- no records -</p>

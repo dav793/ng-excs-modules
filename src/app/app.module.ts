@@ -4,7 +4,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialPackageModule } from "./material-package/material-package.module";
 
+import { TableModule } from "./table/table.module";
 import { FilterModule } from './filter/filter.module';
+import { SortModule } from "./sort/sort.module";
 
 import { AppComponent } from './app.component';
 import { CarsTableComponent } from './car/cars-table/cars-table.component';
@@ -45,7 +47,9 @@ import { MoviesTableComponent } from './movie/movies-table/movies-table.componen
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialPackageModule,
-    FilterModule
+    TableModule,
+    FilterModule,
+    SortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

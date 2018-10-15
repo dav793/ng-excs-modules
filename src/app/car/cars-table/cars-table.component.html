@@ -4,21 +4,21 @@
 
     <ng-container matColumnDef="manufacturer">
       <th mat-header-cell *matHeaderCellDef>
-        MANUFACTURER
+        <span (click)="sortBy('manufacturer')">MANUFACTURER</span>
       </th>
       <td mat-cell *matCellDef="let element"> {{ element.manufacturer }} </td>
     </ng-container>
 
     <ng-container matColumnDef="model">
       <th mat-header-cell *matHeaderCellDef>
-        MODEL
+        <span (click)="sortBy('model')">MODEL</span>
       </th>
       <td mat-cell *matCellDef="let element"> {{ element.model }} </td>
     </ng-container>
 
     <ng-container matColumnDef="price">
       <th mat-header-cell *matHeaderCellDef>
-        PRICE
+        <span (click)="sortBy('price')">PRICE</span>
       </th>
       <td mat-cell *matCellDef="let element"> {{ element.price | currency }} </td>
     </ng-container>

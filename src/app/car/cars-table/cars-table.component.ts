@@ -13,11 +13,17 @@ export class CarsTableComponent implements OnChanges {
     'model',
     'price'
   ];
+  sortingByColumn: string;
+  sortingDirection: 'asc'|'desc';
 
   constructor() { }
 
   ngOnChanges(chg: SimpleChanges) {
     if (chg['data']) {}
+  }
+
+  sortBy(column: string) {
+    console.log('ok');
   }
 
 }
