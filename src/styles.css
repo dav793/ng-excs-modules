@@ -21,4 +21,12 @@ td {
   padding-right: 24px;
 }
 
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
 

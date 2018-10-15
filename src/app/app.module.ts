@@ -9,8 +9,6 @@ import { FilterModule } from './filter/filter.module';
 import { SortModule } from "./sort/sort.module";
 
 import { AppComponent } from './app.component';
-import { CarsTableComponent } from './car/cars-table/cars-table.component';
-import { MoviesTableComponent } from './movie/movies-table/movies-table.component';
 
 /**
  *  Qué es un módulo?
@@ -37,9 +35,7 @@ import { MoviesTableComponent } from './movie/movies-table/movies-table.componen
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CarsTableComponent,
-    MoviesTableComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

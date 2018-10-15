@@ -86,3 +86,13 @@ import {
   declarations: []
 })
 export class MaterialPackageModule { }
+
+/**
+ *
+ * Angular Material Site: https://material.angular.io
+ *
+ * Installing Angular Material: https://material.angular.io/guide/getting-started
+ *
+ * Material Icons Reference: https://material.io/tools/icons/?style=baseline
+ *
+ */

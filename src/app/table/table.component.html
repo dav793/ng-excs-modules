@@ -1,7 +1,11 @@
 
 <table *ngIf="data && columnMetadata">
   <tr>
-    <th *ngFor="let column of columnMetadata">{{ column.name | uppercase }}</th>
+    <th *ngFor="let column of columnMetadata"><a (click)="sortBy(column.name)">
+      <mat-icon *ngIf="sortByColumn === column.name && sortDirection === 'asc'">arrow_drop_up</mat-icon>
+      <mat-icon *ngIf="sortByColumn === column.name && sortDirection === 'desc'">arrow_drop_down</mat-icon>
+      {{ column.name | uppercase }}
+    </a></th>
   </tr>
   <tr *ngFor="let row of data">
     <td *ngFor="let column of columnMetadata">

@@ -9,9 +9,9 @@
     (filter)="setFilteredCars($event)"
   ></app-filter>
 
-  <app-sort></app-sort>
+  <app-sort [data]="filteredCars" [sortParams]="carSortParams" (sort)="setSortedCars($event)"></app-sort>
 
-  <app-table [data]="filteredCars" [columnMetadata]="carsMetadata"></app-table>
+  <app-table [data]="sortedCars" [columnMetadata]="carsMetadata" (sort)="triggerCarSort($event)"></app-table>
 
 
 
@@ -22,9 +22,9 @@
     (filter)="setFilteredMovies($event)"
   ></app-filter>
 
-  <app-sort></app-sort>
+  <app-sort [data]="filteredMovies" [sortParams]="movieSortParams" (sort)="setSortedMovies($event)"></app-sort>
 
-  <app-table [data]="filteredMovies" [columnMetadata]="moviesMetadata"></app-table>
+  <app-table [data]="sortedMovies" [columnMetadata]="moviesMetadata" (sort)="triggerMovieSort($event)"></app-table>
 
 
 </div>
