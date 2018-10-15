@@ -5,8 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialPackageModule } from "./material-package/material-package.module";
 
 import { TableModule } from "./table/table.module";
-import { FilterModule } from './filter/filter.module';
-import { SortModule } from "./sort/sort.module";
 
 import { AppComponent } from './app.component';
 
@@ -31,6 +29,15 @@ import { AppComponent } from './app.component';
  *
  *    - bootstrap:  La vista principal de la aplicación (conocida como el root component) que hospeda todas las demás vistas de la aplicación.
  *                  Unicamente el root component debe contener la propiedad bootstrap.
+ *
+ *
+ *  Guia de trabajo:
+ *
+ *    - Observe la utilidad que provee el modulo TableModule.
+ *    - Como puedo usar el modulo FilterModule para filtrar las filas de las tablas?
+ *    - Observe las utilidades que proveen los modulos de Angular Material.
+ *    - Como puedo usar el modulo SortModule para ordenar las filas de las tablas?
+ *    - Como puedo usar ambos modulos simultaneamente?
  */
 
 @NgModule({
@@ -42,10 +49,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialPackageModule,
-    TableModule,
-    FilterModule,
-    SortModule
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
